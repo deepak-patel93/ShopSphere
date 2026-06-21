@@ -1,0 +1,108 @@
+/* Full page background */
+.container.form-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(135deg, #667eea, #764ba2, #ff6b6b);
+  background-size: 300% 300%;
+  animation: bgMove 8s ease infinite;
+}
+
+/* Background animation */
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Glass card */
+.form-content {
+  width: 380px;
+  padding: 30px;
+
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Smooth entry */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Form layout */
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Title */
+.form h2 {
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+/* Input spacing */
+.input-group {
+  margin-bottom: 15px;
+}
+
+/* Inputs */
+.input-group input {
+  width: 100%;
+  padding: 12px 14px;
+
+  border: none;
+  border-radius: 12px;
+
+  outline: none;
+  font-size: 14px;
+
+  background: rgba(255, 255, 255, 0.9);
+  transition: 0.3s ease;
+}
+
+/* Input focus effect */
+.input-group input:focus {
+  transform: scale(1.02);
+  box-shadow: 0 0 12px rgba(255,255,255,0.6);
+}
+
+/* Button */
+.authBtn {
+  padding: 12px;
+  margin-top: 10px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: linear-gradient(90deg, #ff512f, #dd2476);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Button hover */
+.authBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 81, 47, 0.6);
+}

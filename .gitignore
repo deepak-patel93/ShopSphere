@@ -1,0 +1,12 @@
+
+
+node_modules/
+dist/
+build/
+config.env
+node_modules
+node_modules
+dist
+build
+.env    
+
