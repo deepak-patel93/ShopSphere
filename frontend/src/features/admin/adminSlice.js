@@ -21,7 +21,7 @@ export const createProduct=createAsyncThunk('admin/createProduct',async(productD
             }
         }
       
-        const {data}=await axios.post('/api/v1/admin/product/create',productData,config)
+        const {data}=await axios.post('/api/v1/admin/product/create',productData,{withCredentials:true},config)
         return data;
     }catch(error){
         return rejectWithValue(error.response?.data ||"Product Creation Failed")
